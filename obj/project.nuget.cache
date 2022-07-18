@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LrVWXbSoRG8JCIBzpUW55dKLAtBCciewWi1xWXxCpAS/GwYX0/ia5mVEK1n4uvo8+4MYR7N/YSZuz5t5upbb5Q==",
+  "dgSpecHash": "uoQi0drygpkM/eMX3rDqvP7Vcwyd+mfaJIvRtr32F9j6PeGBMbkFAvezMMSKDmXI5wKFImd6TaelrDFKyVr+Jg==",
   "success": true,
-  "projectFilePath": "/home/asilbek/Downloads/auto_diler/net-bootcamp-002-main/05-07/bot/bot.csproj",
+  "projectFilePath": "/home/asilbek/Downloads/auto_diler/AutoDiller/bot.csproj",
   "expectedPackageFiles": [
     "/home/asilbek/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/home/asilbek/.nuget/packages/microsoft.data.sqlite.core/6.0.6/microsoft.data.sqlite.core.6.0.6.nupkg.sha512",

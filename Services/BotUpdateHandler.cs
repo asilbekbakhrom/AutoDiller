@@ -95,7 +95,7 @@ public partial class BotUpdateHandler : IUpdateHandler
 
         var language = await _userService.GetLanguageCodeAsync(from?.Id);
         _logger.LogInformation($"Language set to: {language}");
-        return new CultureInfo(language ?? "uz-Uz");
+        return new CultureInfo(language ?? "uz");
     }
 
     private Task HandleUnknownUpdate(ITelegramBotClient client, Update update, CancellationToken token)

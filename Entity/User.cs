@@ -9,6 +9,7 @@ public class User
     public string? LastName { get; set; }
     public string? Username { get; set; }
     public string? LanguageCode { get; set; } = "uz";
+    public string? AutoBrand { get; set; }
 
     public DateTimeOffset CreatedAt { get; set; }
     public DateTimeOffset LastInteractionAt { get; set; }

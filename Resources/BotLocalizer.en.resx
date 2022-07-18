@@ -118,11 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="greeting" xml:space="preserve">
-    <value>Salom ,  &amp;#10;&amp;#10;Bu super qobilyatlarga 🦹🏻‍♂️ ega super 🤖.  &amp;#10;&amp;#10;Boshlash uchun &lt;strong&gt;Tilni tanlang&lt;/strong&gt;👇</value>
+    <value> Hello , &amp;#10;&amp;#10;This is a super 🤖 with super powers   🏻‍♂️. &amp;#10;&amp;#10;To start &lt;strong&gt;Choose a language&lt;/strong&gt;👇</value>
     <comment/>
   </data>
   <data name="choose_brand" xml:space="preserve">
-    <value>Markasini tanlang</value>
+    <value>Choose Brand</value>
     <comment/>
   </data>
 </root>

@@ -1406,11 +1406,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/asilbek/Downloads/auto_diler/net-bootcamp-002-main/05-07/bot/bot.csproj",
+      "projectUniqueName": "/home/asilbek/Downloads/auto_diler/AutoDiller/bot.csproj",
       "projectName": "bot",
-      "projectPath": "/home/asilbek/Downloads/auto_diler/net-bootcamp-002-main/05-07/bot/bot.csproj",
+      "projectPath": "/home/asilbek/Downloads/auto_diler/AutoDiller/bot.csproj",
       "packagesPath": "/home/asilbek/.nuget/packages/",
-      "outputPath": "/home/asilbek/Downloads/auto_diler/net-bootcamp-002-main/05-07/bot/obj/",
+      "outputPath": "/home/asilbek/Downloads/auto_diler/AutoDiller/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/asilbek/.nuget/NuGet/NuGet.Config"
