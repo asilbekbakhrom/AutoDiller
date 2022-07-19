@@ -139,6 +139,7 @@
 /home/asilbek/Downloads/auto_diler/AutoDiller/bin/Debug/net6.0/bot.runtimeconfig.json
 /home/asilbek/Downloads/auto_diler/AutoDiller/bin/Debug/net6.0/bot.dll
 /home/asilbek/Downloads/auto_diler/AutoDiller/bin/Debug/net6.0/bot.pdb
+/home/asilbek/Downloads/auto_diler/AutoDiller/bin/Debug/net6.0/en/bot.resources.dll
 /home/asilbek/Downloads/auto_diler/AutoDiller/bin/Debug/net6.0/ru/bot.resources.dll
 /home/asilbek/Downloads/auto_diler/AutoDiller/bin/Debug/net6.0/uz/bot.resources.dll
 /home/asilbek/Downloads/auto_diler/AutoDiller/bin/Debug/net6.0/Humanizer.dll
@@ -175,6 +176,7 @@
 /home/asilbek/Downloads/auto_diler/AutoDiller/bin/Debug/net6.0/runtimes/win-x64/native/e_sqlite3.dll
 /home/asilbek/Downloads/auto_diler/AutoDiller/bin/Debug/net6.0/runtimes/win-x86/native/e_sqlite3.dll
 /home/asilbek/Downloads/auto_diler/AutoDiller/obj/Debug/net6.0/bot.csproj.AssemblyReference.cache
+/home/asilbek/Downloads/auto_diler/AutoDiller/obj/Debug/net6.0/bot.Resources.BotLocalizer.en.resources
 /home/asilbek/Downloads/auto_diler/AutoDiller/obj/Debug/net6.0/bot.Resources.BotLocalizer.ru.resources
 /home/asilbek/Downloads/auto_diler/AutoDiller/obj/Debug/net6.0/bot.Resources.BotLocalizer.uz.resources
 /home/asilbek/Downloads/auto_diler/AutoDiller/obj/Debug/net6.0/bot.csproj.GenerateResource.cache
@@ -184,6 +186,8 @@
 /home/asilbek/Downloads/auto_diler/AutoDiller/obj/Debug/net6.0/bot.csproj.CoreCompileInputs.cache
 /home/asilbek/Downloads/auto_diler/AutoDiller/obj/Debug/net6.0/bot.MvcApplicationPartsAssemblyInfo.cs
 /home/asilbek/Downloads/auto_diler/AutoDiller/obj/Debug/net6.0/bot.MvcApplicationPartsAssemblyInfo.cache
+/home/asilbek/Downloads/auto_diler/AutoDiller/obj/Debug/net6.0/en/bot.resources.cs
+/home/asilbek/Downloads/auto_diler/AutoDiller/obj/Debug/net6.0/en/bot.resources.dll
 /home/asilbek/Downloads/auto_diler/AutoDiller/obj/Debug/net6.0/ru/bot.resources.cs
 /home/asilbek/Downloads/auto_diler/AutoDiller/obj/Debug/net6.0/ru/bot.resources.dll
 /home/asilbek/Downloads/auto_diler/AutoDiller/obj/Debug/net6.0/uz/bot.resources.cs
@@ -197,7 +201,3 @@
 /home/asilbek/Downloads/auto_diler/AutoDiller/obj/Debug/net6.0/bot.pdb
 /home/asilbek/Downloads/auto_diler/AutoDiller/obj/Debug/net6.0/bot.genruntimeconfig.cache
 /home/asilbek/Downloads/auto_diler/AutoDiller/obj/Debug/net6.0/ref/bot.dll
-/home/asilbek/Downloads/auto_diler/AutoDiller/bin/Debug/net6.0/en/bot.resources.dll
-/home/asilbek/Downloads/auto_diler/AutoDiller/obj/Debug/net6.0/bot.Resources.BotLocalizer.en.resources
-/home/asilbek/Downloads/auto_diler/AutoDiller/obj/Debug/net6.0/en/bot.resources.cs
-/home/asilbek/Downloads/auto_diler/AutoDiller/obj/Debug/net6.0/en/bot.resources.dll

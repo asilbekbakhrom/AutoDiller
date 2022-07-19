@@ -11,8 +11,8 @@ using bot.Data;
 namespace bot.Data.Migrations
 {
     [DbContext(typeof(BotDbContext))]
-    [Migration("20220718152134_AutoBrand")]
-    partial class AutoBrand
+    [Migration("20220719140007_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
