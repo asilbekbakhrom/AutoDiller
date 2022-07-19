@@ -20,22 +20,21 @@ public static class StringConstants
         { "ka", "KIA" },
         { "ct", "Chevrolet" },
         { "bw", "BMW"},
-        { "back", "ortga"},
     };
-    public static Dictionary<string, string> CarNamesForBuy => new()
+    public static Dictionary<string, string> CarNamesForInfo => new()
     {
-        { "ta", "Tesla " },
-        { "hi", "Hyundai " },
-        { "ka", "KIA " },
-        { "ct", "Chevrolet " },
-        { "bw", "BMW "},
+        { "ta", "Tesla Inc" },
+        { "hi", "Hyundai Inc" },
+        { "ka", "KIA Inc" },
+        { "ct", "Chevrolet Inc" },
+        { "bw", "BMW Inc"},
     };
     public static Dictionary<string, string> FunctionsNames => new()
     {
-        { "td", "Test Drive dan o'tish" },
-        { "soa", "Shartnoma imzolash" },
-        { "at", "Avtomobil turlari" },
-        { "nj", "Narxlar jadvali" },
+        { "td", "Test Drive" },
+        { "soa", "📄✍️" },
+        { "at", "🚘ℹ️" },
+        { "nj", "💲" },
     };
     public static Dictionary<string, string> KIATypes => new()
     {
@@ -70,41 +69,41 @@ public static class StringConstants
         { "mx", "Tesla Model X" },
         { "m3", "Tesla Model 3"},
         { "my", "Tesla Model Y"},
-        { "cr", "Tesla Cyber Truck"},
+        { "cr", "Tesla Model X Plaid"},
     };
-    public static Dictionary<string, string> KIATypesForBuy => new()
+    public static Dictionary<string, string> KIATypesForInfo => new()
     {
-        { "ks", "KIA Soul🚗" },
-        { "k5", "KIA K5🚗"},
-        { "kn", "KIA Niro🚗"},
-        { "ks", "KIA Sorento🚗"},
+        { "ks", "KIA Soul Info" },
+        { "k5", "KIA K5 Info"},
+        { "kn", "KIA Stringer Info"},
+        { "kso", "KIA Sorento Info"},
     };
-    public static Dictionary<string, string> HyundaiTypesForBuy => new()
+    public static Dictionary<string, string> HyundaiTypesForInfo => new()
     {
-        { "hs", "Hyundai Sonata🚗" },
-        { "he", "Hyundai Elantra🚗"},
-        { "ho", "Hyundai Sontafe🚗"},
-        { "ht", "Hyundai Tucson🚗"},
+        { "hs", "Hyundai Sonata Info" },
+        { "he", "Hyundai Elantra Info"},
+        { "ho", "Hyundai Sontafe Info"},
+        { "ht", "Hyundai Tucson Info"},
     };
-    public static Dictionary<string, string> ChevroletTypesForBuy => new()
+    public static Dictionary<string, string> ChevroletTypesForInfo => new()
     {
-        { "cc", "Chevrolet Comaro🚗" },
-        { "cm", "Chevrolet Malibu🚗"},
-        { "ct", "Chevrolet Trailblazer🚗"},
-        { "ca", "Chevrolet Tahoe🚗"},
+        { "cc", "Chevrolet Comaro Info" },
+        { "cm", "Chevrolet Malibu Info"},
+        { "ct", "Chevrolet Trailblazer Info"},
+        { "ca", "Chevrolet Tahoe Info"},
     };
-    public static Dictionary<string, string> BMWTypesForBuy => new()
+    public static Dictionary<string, string> BMWTypesForInfo => new()
     {
-        { "x5", "BMW X5🚗" },
-        { "m5", "BMW M5🚗" },
-        { "i8", "BMW I8🚗"},
-        { "m4", "BMW M4🚗"},
+        { "x5", "BMW X5 Info" },
+        { "m5", "BMW M5 Info" },
+        { "i8", "BMW I8 Info"},
+        { "m4", "BMW M4 Info"},
     };
-    public static Dictionary<string, string> TeslaTypesForBuy => new()
+    public static Dictionary<string, string> TeslaTypesForInfo => new()
     {
-        { "mx", "Tesla Model X🚗" },
-        { "m3", "Tesla Model 3🚗"},
-        { "my", "Tesla Model Y🚗"},
-        { "cr", "Tesla Cyber Truck🚗"},
+        { "mx", "Tesla Model X Info" },
+        { "m3", "Tesla Model 3 Info"},
+        { "my", "Tesla Model Y Info"},
+        { "cr", "Tesla Model X Plaid Info"},
     };
 }

@@ -10,7 +10,7 @@ public partial class BotUpdateHandler
     {
         await botClient.SendTextMessageAsync(
             chatId: message.Chat.Id,
-            text: "Raqamni jo'natish",
+            text: "Raqamni jo'nating",
             replyMarkup: CreateContactRequestButton("Telefon raqamni ulashish"));
 
     }

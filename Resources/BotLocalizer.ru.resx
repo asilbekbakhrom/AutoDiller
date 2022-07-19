@@ -125,4 +125,8 @@
     <value>Выберите марку автомобиля.</value>
     <comment/>
   </data>
+  <data name="what-do-you-want" xml:space="preserve">
+    <value> Что вы хотите сделать?</value>
+    <comment/>
+  </data>
 </root>

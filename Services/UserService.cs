@@ -52,7 +52,6 @@ public class UserService
         user.LanguageCode = languageCode;
         _context?.Users?.Update(user);
         await _context.SaveChangesAsync();
-
         return (true, null);
     }
 

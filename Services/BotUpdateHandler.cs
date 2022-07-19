@@ -25,7 +25,7 @@ public partial class BotUpdateHandler : IUpdateHandler
     
     public Task HandlePollingErrorAsync(ITelegramBotClient botClient, Exception exception, CancellationToken cancellationToken)
     {
-        _logger.LogInformation("Error occured with Telegram Bot: {e.Message}", exception);
+        _logger.LogInformation($"Error occured with Telegram Bot: {0}", exception);
 
         return Task.CompletedTask;
     }
@@ -74,8 +74,8 @@ public partial class BotUpdateHandler : IUpdateHandler
 
         var result = await _userService.AddUserAsync(new Entity.User()
         {
-            FirstName = from.FirstName,
-            LastName = from.LastName,
+            FirstName = from?.FirstName,
+            LastName = from?.LastName,
             ChatId = update.Message.Chat.Id,
             UserId = from.Id,
             Username = from.Username,
@@ -86,11 +86,11 @@ public partial class BotUpdateHandler : IUpdateHandler
 
         if(result.IsSuccess)
         {
-            _logger.LogInformation("New user added: {from.Id}");
+            _logger.LogInformation($"New user added: {from.Id}");
         }
         else
         {
-            _logger.LogInformation("User not added: {from.Id}, {result.ErrorMessage}");
+            _logger.LogInformation($"User not added: {from.Id}, {result.ErrorMessage}");
         }
 
         var language = await _userService.GetLanguageCodeAsync(from?.Id);

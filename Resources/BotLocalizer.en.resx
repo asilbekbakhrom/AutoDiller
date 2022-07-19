@@ -125,4 +125,8 @@
     <value>Choose Brand</value>
     <comment/>
   </data>
+  <data name="what-do-you-want" xml:space="preserve">
+    <value>What do you want?</value>
+    <comment/>
+  </data>
 </root>
