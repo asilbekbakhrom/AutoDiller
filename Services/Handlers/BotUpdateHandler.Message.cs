@@ -65,6 +65,7 @@ public partial class BotUpdateHandler
             "/start" => HandleStartAsync(client, message, token),
             "O'zbekcha🇺🇿" or "Русский🇷🇺" or "English🏴󠁧󠁢󠁥󠁮󠁧󠁿" => HandleLanguageAsync(client,message,token),
             // "Tesla" or "Hyundai" or "KIA" or "Chevrolet" or "BMW"  => Functions(client, message, token),
+            "ℹ️" => AboutUs(client,message,token),
             "Test Drive" => TestDrive(client, message, token),
             "📄✍️" => CarBuy(client,message,token),
             "🚘ℹ️" => CarInfo(client,message,token),
@@ -110,6 +111,22 @@ public partial class BotUpdateHandler
          
         await handler;
         
+    }
+
+    private async Task AboutUs(ITelegramBotClient client, Message message, CancellationToken token)
+    {
+        await client.SendTextMessageAsync(
+            chatId: message.Chat.Id,
+            text: _localizer["about-us"],
+            parseMode: ParseMode.Html,
+            cancellationToken: token);  
+        
+          await client.SendTextMessageAsync(
+            chatId: message.Chat.Id,
+            text: _localizer["gotomenu"],
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.GotoMenu.Values.ToArray(), 5),
+            parseMode: ParseMode.Html,
+            cancellationToken: token);       
     }
 
     private async Task Prices(ITelegramBotClient client, Message message, CancellationToken token)

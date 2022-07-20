@@ -40,6 +40,7 @@ public static class StringConstants
         { "at", "🚘ℹ️" },
         { "nj", "💲" },
         { "chl", "🇺🇿🔄🇷🇺🔄🏴󠁧󠁢󠁥󠁮󠁧󠁿" },
+        {"us","ℹ️"}
     };
     public static Dictionary<string, string> KIATypes => new()
     {

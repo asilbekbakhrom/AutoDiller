@@ -229,4 +229,8 @@
     <value>Do you to exit this page.If you want  click  🏠</value>
     <comment/>
   </data>
+  <data name="about-us" xml:space="preserve">
+    <value>This is a bot created by Asilbek Bahrom. To contact Asilbek Bakhrom @asilbek_bakhrom.</value>
+    <comment/>
+  </data>
 </root>

@@ -229,4 +229,8 @@
     <value>Agar siz ushbu sahifadan chiqmoqchi bo'lsangiz. Agar xohlasangiz 🏠 tugmasini bosing</value>
     <comment/>
   </data>
+  <data name="about-us" xml:space="preserve">
+    <value>Bu Asilbek Baxrom tomonidan yaratilgan bot. Asilbek Bakhrom bilan bog'lanish uchun @asilbek_bakhrom.</value>
+    <comment/>
+  </data>
 </root>
