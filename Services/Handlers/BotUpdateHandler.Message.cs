@@ -63,6 +63,7 @@ public partial class BotUpdateHandler
             "Test Drive" => TestDrive(client, message, token),
             "📄✍️" => CarBuy(client,message,token),
             "🚘ℹ️" => CarInfo(client,message,token),
+            "💲" => Prices(client,message,token),
             "Tesla" => TeslaModels(client, message,token),
             "Hyundai" => HyundaiModels(client, message,token),
             "KIA" => KIAModels(client, message,token),
@@ -94,14 +95,30 @@ public partial class BotUpdateHandler
             "BMW I8 Info" => BMWI8Info(client,message,token), 
             "BMW M4 Info" => BMWM4Info(client,message,token),
             "Tesla Model X Info" => TeslaModelXInfo(client,message,token),
-            // "Tesla Model 3 Info" => TeslaModel3Info(client,message,token),
-            // "Tesla Model Y Info" => TeslaModelYInfo(client,message,token), 
-            // "Tesla Model X Plaid Info" => TeslaModelXPlaid(client,message,token),
+            "Tesla Model 3 Info" => TeslaModel3Info(client,message,token),
+            "Tesla Model Y Info" => TeslaModelYInfo(client,message,token), 
+            "Tesla Model X Plaid Info" => TeslaModelXPlaidInfo(client,message,token),
             _ => Task.CompletedTask
         };
          
         await handler;
         
+    }
+
+    private async Task Prices(ITelegramBotClient client, Message message, CancellationToken token)
+    {
+        var root = Directory.GetCurrentDirectory();
+        var filePath = Path.Combine(root, "prices.pdf");
+        var bytes = await System.IO.File.ReadAllBytesAsync(filePath, token);
+
+        using var stream = new MemoryStream(bytes);
+
+        await client.SendPhotoAsync(
+            message.Chat.Id,
+            caption:"Narxlar blank listi",
+            photo: stream,
+            replyMarkup: new ReplyKeyboardRemove(),
+            cancellationToken: token);
     }
 
     private async Task KiaSoulInfo(ITelegramBotClient client, Message message, CancellationToken token)
@@ -327,17 +344,17 @@ public partial class BotUpdateHandler
         await client.SendPhotoAsync(
                 chatId: from.Id,
                 photo: "https://www.ccarprice.com/products/Chevrolet_Malibu_LT_2.4L.jpg",
-                caption: "Chevrolet Trailblazer\n5.000$",
+                caption: "Chevrolet malibu\n2.000$",
                 parseMode: ParseMode.Html);
         var root = Directory.GetCurrentDirectory();
-        var filePath = Path.Combine(root, "trailblazer.png");
+        var filePath = Path.Combine(root, "malibu.png");
         var bytes = await System.IO.File.ReadAllBytesAsync(filePath, token);
 
         using var stream = new MemoryStream(bytes);
 
         await client.SendPhotoAsync(
             message.Chat.Id,
-            caption:"Chevrolet Trailblazer texnik xususiyatlari",
+            caption:"Chevrolet Malibu texnik xususiyatlari",
             photo: stream,
             replyMarkup: new ReplyKeyboardRemove(),
             cancellationToken: token);    
@@ -624,25 +641,6 @@ public partial class BotUpdateHandler
         //         parseMode: ParseMode.Html,
         //         cancellationToken: token);                           
     }
-    private async Task WriteAvtomobilTanlandiForBuy(ITelegramBotClient client, Message message, CancellationToken token)
-    {
-        // var from = message.From;
-        //  await client.SendTextMessageAsync(
-        //         chatId: message.Chat.Id,
-        //         text: "Avtomobil Tanlandi",
-        //         parseMode: ParseMode.Html,
-        //         cancellationToken: token);  
-        
-        await GetNumber(client, message, token);
-        var number = message.Text;
-        var s = await client.SendTextMessageAsync("https://t.me/numberclients", number);
-        //  await client.SendTextMessageAsync(
-        //         chatId: message.Chat.Id,
-        //         text: "🏠Bosh Menu",
-        //         replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.Menu.Values.ToArray(), 2),
-        //         parseMode: ParseMode.Html,
-        //         cancellationToken: token);                           
-    }
     private async Task BMWModels(ITelegramBotClient client, Message message, CancellationToken token)
     {
         await client.SendTextMessageAsync(
@@ -657,7 +655,7 @@ public partial class BotUpdateHandler
     {
         await client.SendTextMessageAsync(
                 chatId: message.Chat.Id,
-                text: "Chevrolet turlari",
+                text: "Chevrolet",
                 replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.ChevroletTypes.Values.ToArray(), 2),
                 parseMode: ParseMode.Html,
                 cancellationToken: token);       
