@@ -4,14 +4,18 @@ public static class StringConstants
 {
     public static Dictionary<string, string> Menu => new()
     {
-        // { "bm", "🏠 Bosh Menu" },
         { "trj", "Telefon Raqamni jo'natish"}
-    };   
+    };
+     
+    public static Dictionary<string, string> GotoMenu => new()
+    {
+        { "bm", "🏠" },  
+    };
     public static Dictionary<string, string> LanguageNames => new()
     {
-        { "uz-Uz", "O'zbekcha" },
-        { "ru-Ru", "Русский" },
-        { "en-Us", "English" },
+        { "uz-Uz", "O'zbekcha🇺🇿" },
+        { "ru-Ru", "Русский🇷🇺" },
+        { "en-Us", "English🏴󠁧󠁢󠁥󠁮󠁧󠁿" },
     };
     public static Dictionary<string, string> CarNames => new()
     {
@@ -35,6 +39,7 @@ public static class StringConstants
         { "soa", "📄✍️" },
         { "at", "🚘ℹ️" },
         { "nj", "💲" },
+        { "chl", "🇺🇿🔄🇷🇺🔄🏴󠁧󠁢󠁥󠁮󠁧󠁿" },
     };
     public static Dictionary<string, string> KIATypes => new()
     {

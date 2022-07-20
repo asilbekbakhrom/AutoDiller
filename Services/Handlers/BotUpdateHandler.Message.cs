@@ -31,16 +31,21 @@ public partial class BotUpdateHandler
     {
         await client.SendTextMessageAsync(
             chatId: message.Chat.Id,
-            text: "Tez orada bizning operatorlar siz bilan bog'lanadi",
+            text: _localizer["connect-with-operator"],
             cancellationToken: token);
         
+        await client.SendTextMessageAsync(
+            chatId: message.Chat.Id,
+            text: _localizer["gotomenu"],
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.GotoMenu.Values.ToArray(), 5),
+            parseMode: ParseMode.Html,
+            cancellationToken: token);  
+
         await client.SendTextMessageAsync(
             chatId: -1001775613010,
             text: $"Yangi klient ro`yxatdan o`tdi ismi: {message.Chat.FirstName} uning telefon raqami : {message.Contact.PhoneNumber}",
             cancellationToken: token
         );
-        
-        await Functions(client, message, token);
     }
 
     private Task HandleUnknownMessageAsync(ITelegramBotClient client, Message message, CancellationToken token)
@@ -58,12 +63,13 @@ public partial class BotUpdateHandler
         var handler = message.Text switch
         {
             "/start" => HandleStartAsync(client, message, token),
-            "O'zbekcha" or "Русский" or "English" => HandleLanguageAsync(client,message,token),
+            "O'zbekcha🇺🇿" or "Русский🇷🇺" or "English🏴󠁧󠁢󠁥󠁮󠁧󠁿" => HandleLanguageAsync(client,message,token),
             // "Tesla" or "Hyundai" or "KIA" or "Chevrolet" or "BMW"  => Functions(client, message, token),
             "Test Drive" => TestDrive(client, message, token),
             "📄✍️" => CarBuy(client,message,token),
             "🚘ℹ️" => CarInfo(client,message,token),
             "💲" => Prices(client,message,token),
+            "🇺🇿🔄🇷🇺🔄🏴󠁧󠁢󠁥󠁮󠁧󠁿" => HandleStartAsync(client,message,token),
             "Tesla" => TeslaModels(client, message,token),
             "Hyundai" => HyundaiModels(client, message,token),
             "KIA" => KIAModels(client, message,token),
@@ -74,6 +80,7 @@ public partial class BotUpdateHandler
             "KIA Inc" => KIAModelsForInfo(client, message,token),
             "Chevrolet Inc" => ChevroletModelsInfo(client, message,token),
             "BMW Inc" => BMWModelsForInfo(client, message,token),
+            "🏠" => BackHome(client,message,token),
             "KIA Soul" or "KIA K5" or "KIA Niro" or "KIA Sorento"or"Hyundai Sonata"or "Hyundai Elantra" or
             "Hyundai Sontafe"or"Hyundai Tucson"or"Chevrolet Comaro"or"Chevrolet Malibu"or"Chevrolet Trailblazer"
             or"Chevrolet Tahoe"or"BMW X5"or"BMW M5"or"BMW I8"or"BMW M4"or"Tesla Model X"or"Tesla Model 3"or"Tesla Model Y"
@@ -115,7 +122,7 @@ public partial class BotUpdateHandler
 
         await client.SendPhotoAsync(
             message.Chat.Id,
-            caption:"Narxlar blank listi",
+            caption:_localizer["prices-blanc"],
             photo: stream,
             replyMarkup: new ReplyKeyboardRemove(),
             cancellationToken: token);
@@ -137,10 +144,17 @@ public partial class BotUpdateHandler
 
         await client.SendPhotoAsync(
             message.Chat.Id,
-            caption:"Kia Soul texnik xususiyatlari",
+            caption:_localizer["kia-soul"],
             photo: stream,
             replyMarkup: new ReplyKeyboardRemove(),
             cancellationToken: token);
+
+        await client.SendTextMessageAsync(
+            chatId: message.Chat.Id,
+            text: _localizer["gotomenu"],
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.GotoMenu.Values.ToArray(), 5),
+            parseMode: ParseMode.Html,
+            cancellationToken: token);    
     }
     private async Task KiaK5Info(ITelegramBotClient client, Message message, CancellationToken token)
     {
@@ -158,10 +172,17 @@ public partial class BotUpdateHandler
 
         await client.SendPhotoAsync(
             message.Chat.Id,
-            caption:"Kia K5 texnik xususiyatlari",
+            caption:_localizer["kia-k5"],
             photo: stream,
             replyMarkup: new ReplyKeyboardRemove(),
             cancellationToken: token);
+
+        await client.SendTextMessageAsync(
+            chatId: message.Chat.Id,
+            text: _localizer["gotomenu"],
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.GotoMenu.Values.ToArray(), 5),
+            parseMode: ParseMode.Html,
+            cancellationToken: token);          
     }
         private async Task KiaStringerInfo(ITelegramBotClient client, Message message, CancellationToken token)
     {
@@ -179,10 +200,17 @@ public partial class BotUpdateHandler
 
         await client.SendPhotoAsync(
             message.Chat.Id,
-            caption:"Kia Stringer texnik xususiyatlari",
+            caption:_localizer["kia-stringer"],
             photo: stream,
             replyMarkup: new ReplyKeyboardRemove(),
             cancellationToken: token);
+
+        await client.SendTextMessageAsync(
+            chatId: message.Chat.Id,
+            text: _localizer["gotomenu"],
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.GotoMenu.Values.ToArray(), 5),
+            parseMode: ParseMode.Html,
+            cancellationToken: token);         
     }
 
     private async Task KiaSorentoInfo(ITelegramBotClient client, Message message, CancellationToken token)
@@ -201,10 +229,17 @@ public partial class BotUpdateHandler
 
         await client.SendPhotoAsync(
             message.Chat.Id,
-            caption:"Kia Sorento texnik xususiyatlari",
+            caption:_localizer["kia-sorento"],
             photo: stream,
             replyMarkup: new ReplyKeyboardRemove(),
             cancellationToken: token);
+
+        await client.SendTextMessageAsync(
+            chatId: message.Chat.Id,
+            text: _localizer["gotomenu"],
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.GotoMenu.Values.ToArray(), 5),
+            parseMode: ParseMode.Html,
+            cancellationToken: token);         
     }
         private async Task HyundaiSonataForInfo(ITelegramBotClient client, Message message, CancellationToken token)
     {
@@ -222,10 +257,17 @@ public partial class BotUpdateHandler
 
         await client.SendPhotoAsync(
             message.Chat.Id,
-            caption:"Hyundai Sonata texnik xususiyatlari",
+            caption:_localizer["hyundai-sonata"],
             photo: stream,
             replyMarkup: new ReplyKeyboardRemove(),
             cancellationToken: token);
+
+        await client.SendTextMessageAsync(
+            chatId: message.Chat.Id,
+            text: _localizer["gotomenu"],
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.GotoMenu.Values.ToArray(), 5),
+            parseMode: ParseMode.Html,
+            cancellationToken: token);         
     }
     
     private async Task HyundaiElantraInfo(ITelegramBotClient client, Message message, CancellationToken token)
@@ -244,10 +286,17 @@ public partial class BotUpdateHandler
 
         await client.SendPhotoAsync(
             message.Chat.Id,
-            caption:"Hyundai Elantra texnik xususiyatlari",
+            caption:_localizer["hyundai-elantra"],
             photo: stream,
             replyMarkup: new ReplyKeyboardRemove(),
             cancellationToken: token);
+
+        await client.SendTextMessageAsync(
+            chatId: message.Chat.Id,
+            text: _localizer["gotomenu"],
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.GotoMenu.Values.ToArray(), 5),
+            parseMode: ParseMode.Html,
+            cancellationToken: token);  
     }
     
     private async Task HyundaiSontafeInfo(ITelegramBotClient client, Message message, CancellationToken token)
@@ -266,10 +315,17 @@ public partial class BotUpdateHandler
 
         await client.SendPhotoAsync(
             message.Chat.Id,
-            caption:"Hyundai Sontafe texnik xususiyatlari",
+            caption:_localizer["hyundai-sontafe"],
             photo: stream,
             replyMarkup: new ReplyKeyboardRemove(),
             cancellationToken: token);
+
+        await client.SendTextMessageAsync(
+            chatId: message.Chat.Id,
+            text: _localizer["gotomenu"],
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.GotoMenu.Values.ToArray(), 5),
+            parseMode: ParseMode.Html,
+            cancellationToken: token);       
     }
 
     private async Task HyundaiTucsonInfo(ITelegramBotClient client, Message message, CancellationToken token)
@@ -288,10 +344,17 @@ public partial class BotUpdateHandler
 
         await client.SendPhotoAsync(
             message.Chat.Id,
-            caption:"Hyundai Tucson texnik xususiyatlari",
+            caption:_localizer["hyundai-tucson"],
             photo: stream,
             replyMarkup: new ReplyKeyboardRemove(),
-            cancellationToken: token);    
+            cancellationToken: token); 
+
+        await client.SendTextMessageAsync(
+            chatId: message.Chat.Id,
+            text: _localizer["gotomenu"],
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.GotoMenu.Values.ToArray(), 5),
+            parseMode: ParseMode.Html,
+            cancellationToken: token);         
     }
 
     private async Task ChevroletComaroInfo(ITelegramBotClient client, Message message, CancellationToken token)
@@ -310,10 +373,17 @@ public partial class BotUpdateHandler
 
         await client.SendPhotoAsync(
             message.Chat.Id,
-            caption:"Chevrolet Comaro texnik xususiyatlari",
+            caption:_localizer["chevrolet-comaro"],
             photo: stream,
             replyMarkup: new ReplyKeyboardRemove(),
-            cancellationToken: token);    
+            cancellationToken: token);  
+
+        await client.SendTextMessageAsync(
+            chatId: message.Chat.Id,
+            text: _localizer["gotomenu"],
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.GotoMenu.Values.ToArray(), 5),
+            parseMode: ParseMode.Html,
+            cancellationToken: token);        
     }
 
     private async Task ChevroletMalibuInfo(ITelegramBotClient client, Message message, CancellationToken token)
@@ -332,10 +402,17 @@ public partial class BotUpdateHandler
 
         await client.SendPhotoAsync(
             message.Chat.Id,
-            caption:"Chevrolet Malibu texnik xususiyatlari",
+            caption:_localizer["chevrolet-malibu"],
             photo: stream,
             replyMarkup: new ReplyKeyboardRemove(),
-            cancellationToken: token);    
+            cancellationToken: token); 
+
+        await client.SendTextMessageAsync(
+            chatId: message.Chat.Id,
+            text: _localizer["gotomenu"],
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.GotoMenu.Values.ToArray(), 5),
+            parseMode: ParseMode.Html,
+            cancellationToken: token);         
     }
 
     private async Task ChevroletTrailblazerInfo(ITelegramBotClient client, Message message, CancellationToken token)
@@ -343,29 +420,7 @@ public partial class BotUpdateHandler
         var from = message.From;   
         await client.SendPhotoAsync(
                 chatId: from.Id,
-                photo: "https://www.ccarprice.com/products/Chevrolet_Malibu_LT_2.4L.jpg",
-                caption: "Chevrolet malibu\n2.000$",
-                parseMode: ParseMode.Html);
-        var root = Directory.GetCurrentDirectory();
-        var filePath = Path.Combine(root, "malibu.png");
-        var bytes = await System.IO.File.ReadAllBytesAsync(filePath, token);
-
-        using var stream = new MemoryStream(bytes);
-
-        await client.SendPhotoAsync(
-            message.Chat.Id,
-            caption:"Chevrolet Malibu texnik xususiyatlari",
-            photo: stream,
-            replyMarkup: new ReplyKeyboardRemove(),
-            cancellationToken: token);    
-    }
-
-    private async Task ChevroletTrailbluzerInfo(ITelegramBotClient client, Message message, CancellationToken token)
-    {
-        var from = message.From;   
-        await client.SendPhotoAsync(
-                chatId: from.Id,
-                photo: "https://nuravto.uz/uploads/elrbWmVdMY.png",
+                photo: "https://inv.assets.sincrod.com/RTT/Chevrolet/2022/5611373/default/ext_GAZ_deg02.jpg",
                 caption: "Chevrolet Trailblazer\n5.000$",
                 parseMode: ParseMode.Html);
         var root = Directory.GetCurrentDirectory();
@@ -376,11 +431,18 @@ public partial class BotUpdateHandler
 
         await client.SendPhotoAsync(
             message.Chat.Id,
-            caption:"Chevrolet Trailblazer texnik xususiyatlari",
+            caption:_localizer["chevrolet-trailblazer"],
             photo: stream,
             replyMarkup: new ReplyKeyboardRemove(),
             cancellationToken: token);    
-    }
+
+        await client.SendTextMessageAsync(
+            chatId: message.Chat.Id,
+            text: _localizer["gotomenu"],
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.GotoMenu.Values.ToArray(), 5),
+            parseMode: ParseMode.Html,
+            cancellationToken: token);      
+    } 
     
     private async Task ChevroletTahoeInfo(ITelegramBotClient client, Message message, CancellationToken token)
     {
@@ -398,10 +460,17 @@ public partial class BotUpdateHandler
 
         await client.SendPhotoAsync(
             message.Chat.Id,
-            caption:"Chevrolet Tahoe texnik xususiyatlari",
+            caption:_localizer["chevrolet-tahoe"],
             photo: stream,
             replyMarkup: new ReplyKeyboardRemove(),
-            cancellationToken: token);    
+            cancellationToken: token); 
+
+        await client.SendTextMessageAsync(
+            chatId: message.Chat.Id,
+            text: _localizer["gotomenu"],
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.GotoMenu.Values.ToArray(), 5),
+            parseMode: ParseMode.Html,
+            cancellationToken: token);         
     }
 
      private async Task BMWX5Info(ITelegramBotClient client, Message message, CancellationToken token)
@@ -420,10 +489,17 @@ public partial class BotUpdateHandler
 
         await client.SendPhotoAsync(
             message.Chat.Id,
-            caption:"BMW X5 texnik xususiyatlari",
+            caption:_localizer["bmw-x5"],
             photo: stream,
             replyMarkup: new ReplyKeyboardRemove(),
-            cancellationToken: token);    
+            cancellationToken: token); 
+
+        await client.SendTextMessageAsync(
+            chatId: message.Chat.Id,
+            text: _localizer["gotomenu"],
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.GotoMenu.Values.ToArray(), 5),
+            parseMode: ParseMode.Html,
+            cancellationToken: token);         
     }
 
     private async Task BMWM5Info(ITelegramBotClient client, Message message, CancellationToken token)
@@ -442,10 +518,17 @@ public partial class BotUpdateHandler
 
         await client.SendPhotoAsync(
             message.Chat.Id,
-            caption:"BMW M5 texnik xususiyatlari",
+            caption:_localizer["bmw-m5"],
             photo: stream,
             replyMarkup: new ReplyKeyboardRemove(),
-            cancellationToken: token);    
+            cancellationToken: token); 
+
+        await client.SendTextMessageAsync(
+            chatId: message.Chat.Id,
+            text: _localizer["gotomenu"],
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.GotoMenu.Values.ToArray(), 5),
+            parseMode: ParseMode.Html,
+            cancellationToken: token);         
     }
 
      private async Task BMWI8Info(ITelegramBotClient client, Message message, CancellationToken token)
@@ -464,10 +547,17 @@ public partial class BotUpdateHandler
 
         await client.SendPhotoAsync(
             message.Chat.Id,
-            caption:"BMW I8 texnik xususiyatlari",
+            caption:_localizer["bmw-i8"],
             photo: stream,
             replyMarkup: new ReplyKeyboardRemove(),
-            cancellationToken: token);    
+            cancellationToken: token);
+
+        await client.SendTextMessageAsync(
+            chatId: message.Chat.Id,
+            text: _localizer["gotomenu"],
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.GotoMenu.Values.ToArray(), 5),
+            parseMode: ParseMode.Html,
+            cancellationToken: token);          
     }
 
      private async Task BMWM4Info(ITelegramBotClient client, Message message, CancellationToken token)
@@ -486,10 +576,17 @@ public partial class BotUpdateHandler
 
         await client.SendPhotoAsync(
             message.Chat.Id,
-            caption:"BMW M4 texnik xususiyatlari",
+            caption:_localizer["bmw-m4"],
             photo: stream,
             replyMarkup: new ReplyKeyboardRemove(),
-            cancellationToken: token);    
+            cancellationToken: token);
+
+        await client.SendTextMessageAsync(
+            chatId: message.Chat.Id,
+            text: _localizer["gotomenu"],
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.GotoMenu.Values.ToArray(), 5),
+            parseMode: ParseMode.Html,
+            cancellationToken: token);          
     }
 
     private async Task TeslaModelXInfo(ITelegramBotClient client, Message message, CancellationToken token)
@@ -508,10 +605,17 @@ public partial class BotUpdateHandler
 
         await client.SendPhotoAsync(
             message.Chat.Id,
-            caption:"Teska Model X texnik xususiyatlari",
+            caption:_localizer["tesla-model-x-technical-feathures"],
             photo: stream,
             replyMarkup: new ReplyKeyboardRemove(),
-            cancellationToken: token);    
+            cancellationToken: token);  
+
+        await client.SendTextMessageAsync(
+            chatId: message.Chat.Id,
+            text: _localizer["gotomenu"],
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.GotoMenu.Values.ToArray(), 5),
+            parseMode: ParseMode.Html,
+            cancellationToken: token);        
     }
 
     private async Task TeslaModel3Info(ITelegramBotClient client, Message message, CancellationToken token)
@@ -530,10 +634,17 @@ public partial class BotUpdateHandler
 
         await client.SendPhotoAsync(
             message.Chat.Id,
-            caption:"Teska Model 3 texnik xususiyatlari",
+            caption:_localizer["tesla-model-3-technical-feathures"],
             photo: stream,
             replyMarkup: new ReplyKeyboardRemove(),
-            cancellationToken: token);    
+            cancellationToken: token);   
+
+        await client.SendTextMessageAsync(
+            chatId: message.Chat.Id,
+            text: _localizer["gotomenu"],
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.GotoMenu.Values.ToArray(), 5),
+            parseMode: ParseMode.Html,
+            cancellationToken: token);       
     }
 
      private async Task TeslaModelYInfo(ITelegramBotClient client, Message message, CancellationToken token)
@@ -556,6 +667,13 @@ public partial class BotUpdateHandler
             photo: stream,
             replyMarkup: new ReplyKeyboardRemove(),
             cancellationToken: token);    
+
+        await client.SendTextMessageAsync(
+            chatId: message.Chat.Id,
+            text: _localizer["gotomenu"],
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.GotoMenu.Values.ToArray(), 5),
+            parseMode: ParseMode.Html,
+            cancellationToken: token);      
     }
 
      private async Task TeslaModelXPlaidInfo(ITelegramBotClient client, Message message, CancellationToken token)
@@ -574,10 +692,17 @@ public partial class BotUpdateHandler
 
         await client.SendPhotoAsync(
             message.Chat.Id,
-            caption:"Teska Model X Plaid texnik xususiyatlari",
+            caption:_localizer["tesla-model-x-plaid-technical-feathures"],
             photo: stream,
             replyMarkup: new ReplyKeyboardRemove(),
-            cancellationToken: token);    
+            cancellationToken: token); 
+
+        await client.SendTextMessageAsync(
+            chatId: message.Chat.Id,
+            text: _localizer["gotomenu"],
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.GotoMenu.Values.ToArray(), 5),
+            parseMode: ParseMode.Html,
+            cancellationToken: token);         
     }
 
     private async Task CarInfo(ITelegramBotClient client, Message message, CancellationToken token)
@@ -610,36 +735,18 @@ public partial class BotUpdateHandler
     private async Task WriteAvtomobilTanlandi(ITelegramBotClient client, Message message, CancellationToken token)
     {
         var from = message.From;
-         await client.SendTextMessageAsync(
+        await client.SendTextMessageAsync(
                 chatId: message.Chat.Id,
-                text: "Avtomobil Tanlandi",
+                text: _localizer["car-selected"],
                 parseMode: ParseMode.Html,
                 cancellationToken: token);  
-        // await GetNumber(client, message, token);
-        
-
-        
-
-            // var send_channel = await client.SendTextMessageAsync("https://t.me/numberclients", number);   
-            // await client.SendTextMessageAsync(
-            //     chatId: message.Chat.Id,
-            //     text: send_channel,
-            //     parseMode: ParseMode.Html,
-            //     cancellationToken: token);       
-        // await client.SendPhotoAsync(
-        //     message.Chat.Id,
-        //     photo: "https://templatelab.com/wp-content/uploads/2017/08/vehicle-purchase-agreement-04.jpg",
-        //     caption: "Kelishuv qog'ozini to'ldirib bizning avtosalonga keling var Test Drive Qiling",
-        //     replyMarkup: new ReplyKeyboardRemove(),
-        //     cancellationToken: token); 
-
-        await GetNumber(client, message, token);
-        //  await client.SendTextMessageAsync(
-        //         chatId: message.Chat.Id,
-        //         text: "🏠Bosh Menu",
-        //         replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.Menu.Values.ToArray(), 2),
-        //         parseMode: ParseMode.Html,
-        //         cancellationToken: token);                           
+        await GetNumber(client, message, token);     
+        // await client.SendTextMessageAsync(
+        //     chatId: message.Chat.Id,
+        //     text: _localizer["gotomenu"],
+        //     replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.GotoMenu.Values.ToArray(), 5),
+        //     parseMode: ParseMode.Html,
+        //     cancellationToken: token);                       
     }
     private async Task BMWModels(ITelegramBotClient client, Message message, CancellationToken token)
     {
@@ -705,7 +812,7 @@ public partial class BotUpdateHandler
     {
         await client.SendTextMessageAsync(
                 chatId: message.Chat.Id,
-                text: "Chevrolet turlari",
+                text: "Chevrolet",
                 replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.ChevroletTypesForInfo.Values.ToArray(), 2),
                 parseMode: ParseMode.Html,
                 cancellationToken: token);       
@@ -756,7 +863,7 @@ public partial class BotUpdateHandler
         var from = message.From;
         await client.SendTextMessageAsync(
                 chatId: message.Chat.Id,
-                text: _localizer["greeting"],
+                text: _localizer["greeting",message.Chat.FirstName],
                 replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.LanguageNames.Values.ToArray(), 3),
                 parseMode: ParseMode.Html,
                 cancellationToken: token);       
@@ -769,7 +876,6 @@ public partial class BotUpdateHandler
         text: "✔️",
         replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.FunctionsNames.Values.ToArray(), 4),
         cancellationToken: token);
-
         var cultureString = StringConstants.LanguageNames.FirstOrDefault(v => v.Value == message.Text).Key;
         await _userService.UpdateLanguageCodeAsync(message?.From?.Id, cultureString);
 
@@ -784,5 +890,26 @@ public partial class BotUpdateHandler
             replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.FunctionsNames.Values.ToArray(), 4),
             parseMode: ParseMode.Html,
             cancellationToken: token);   
+    }
+    private async Task GetNumber(ITelegramBotClient botClient, Message message, CancellationToken token)
+    {
+        await botClient.SendTextMessageAsync(
+            chatId: message.Chat.Id,
+            text: _localizer["send-number"],
+            replyMarkup: CreateContactRequestButton("Telefon raqamni ulashish📱"));    
+    }
+
+    public static ReplyKeyboardMarkup CreateContactRequestButton(string title)
+    {
+        ReplyKeyboardMarkup replyKeyboardMarkup = new(
+            new[]
+            {
+                KeyboardButton.WithRequestContact(title),
+            })
+            {
+                ResizeKeyboard = true
+            };
+
+        return replyKeyboardMarkup;
     }
 }

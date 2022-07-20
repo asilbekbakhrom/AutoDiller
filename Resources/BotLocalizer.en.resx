@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="greeting" xml:space="preserve">
-    <value> Hello , &amp;#10;&amp;#10;This is a super 🤖 with super powers   🏻‍♂️. &amp;#10;&amp;#10;To start &lt;strong&gt;Choose a language&lt;/strong&gt;👇</value>
+    <value>👋 Hello &lt;strong&gt;{0}&lt;/strong&gt;, &amp;#10;&amp;#10;This is a super 🤖 with super abilities 🦹🏻‍♂️! &amp;#10;&amp;#10;To get started, please &lt;strong&gt;Select Language&lt;/strong&gt; below 👇</value>
     <comment/>
   </data>
   <data name="choose_brand" xml:space="preserve">
@@ -127,6 +127,106 @@
   </data>
   <data name="what-do-you-want" xml:space="preserve">
     <value>What do you want?</value>
+    <comment/>
+  </data>
+  <data name="car-selected" xml:space="preserve">
+    <value>Car Selected </value>
+    <comment/>
+  </data>
+  <data name="send-number" xml:space="preserve">
+    <value>Send Number</value>
+    <comment/>
+  </data>
+  <data name="tesla-model-x-plaid-technical-feathures" xml:space="preserve">
+    <value>Tesla Model X Plaid technical feathures</value>
+    <comment/>
+  </data>
+  <data name="tesla-model-y-technical-feathures" xml:space="preserve">
+    <value>Tesla Model Y technical feathures</value>
+    <comment/>
+  </data>
+  <data name="tesla-model-3-technical-feathures" xml:space="preserve">
+    <value>Tesla Model 3  technical feathures</value>
+    <comment/>
+  </data>
+  <data name="tesla-model-x-technical-feathures" xml:space="preserve">
+    <value>Tesla Model X technical feathures</value>
+    <comment/>
+  </data>
+  <data name="bmw-m4" xml:space="preserve">
+    <value>BMW M4 technical feathures</value>
+    <comment/>
+  </data>
+  <data name="bmw-m5" xml:space="preserve">
+    <value>BMW M5 technical feathures</value>
+    <comment/>
+  </data>
+  <data name="bmw-i8" xml:space="preserve">
+    <value>BMW I8 technical feathures</value>
+    <comment/>
+  </data>
+  <data name="bmw-x5" xml:space="preserve">
+    <value>BMW X5 technical feathures</value>
+    <comment/>
+  </data>
+  <data name="chevrolet-tahoe" xml:space="preserve">
+    <value>Chevrolet Tahoe  technical feathures</value>
+    <comment/>
+  </data>
+  <data name="chevrolet-trailblazer" xml:space="preserve">
+    <value>Chevrolet Trailblazer technical feathures</value>
+    <comment/>
+  </data>
+  <data name="chevrolet-malibu" xml:space="preserve">
+    <value>Chevrolet Malibu technical feathures</value>
+    <comment/>
+  </data>
+  <data name="chevrolet-comaro" xml:space="preserve">
+    <value>Chevrolet Comaro technical feathures</value>
+    <comment/>
+  </data>
+  <data name="hyundai-tucson" xml:space="preserve">
+    <value>Hyundai Tucson technical feathures</value>
+    <comment/>
+  </data>
+  <data name="hyundai-sontafe" xml:space="preserve">
+    <value>Hyundai Sontafe technical feathures</value>
+    <comment/>
+  </data>
+  <data name="hyundai-elantra" xml:space="preserve">
+    <value>Hyundai Elantra technical feathures</value>
+    <comment/>
+  </data>
+  <data name="hyundai-sonata" xml:space="preserve">
+    <value>Hyundai Sonata technical feathures</value>
+    <comment/>
+  </data>
+  <data name="kia-sorento" xml:space="preserve">
+    <value>KIA Sorento technical feathures</value>
+    <comment/>
+  </data>
+  <data name="kia-stringer" xml:space="preserve">
+    <value>KIA Stinger technical feathures</value>
+    <comment/>
+  </data>
+  <data name="kia-k5" xml:space="preserve">
+    <value>KIA K5 technical feathures</value>
+    <comment/>
+  </data>
+  <data name="kia-soul" xml:space="preserve">
+    <value>KIA Soul technical feathures</value>
+    <comment/>
+  </data>
+  <data name="prices-blank" xml:space="preserve">
+    <value>Price list</value>
+    <comment/>
+  </data>
+  <data name="connect-with-operator" xml:space="preserve">
+    <value>Our operators will contact you shortly</value>
+    <comment/>
+  </data>
+  <data name="gotomenu" xml:space="preserve">
+    <value>Do you to exit this page.If you want  click  🏠</value>
     <comment/>
   </data>
 </root>

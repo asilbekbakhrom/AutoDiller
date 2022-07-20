@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="greeting" xml:space="preserve">
-    <value>Salom ,  &amp;#10;&amp;#10;Bu super qobilyatlarga 🦹🏻‍♂️ ega super 🤖.  &amp;#10;&amp;#10;Boshlash uchun &lt;strong&gt;Tilni tanlang&lt;/strong&gt;👇</value>
+    <value>👋 Salom &lt;strong&gt;{0}&lt;/strong&gt;,  &amp;#10;&amp;#10;Bu super qobilyatlarga 🦹🏻‍♂️ ega super 🤖.  &amp;#10;&amp;#10;Boshlash uchun &lt;strong&gt;Tilni tanlang&lt;/strong&gt;👇</value>
     <comment/>
   </data>
   <data name="choose_brand" xml:space="preserve">
@@ -127,6 +127,106 @@
   </data>
   <data name="what-do-you-want" xml:space="preserve">
     <value>Nima qilishni xohlaysiz?</value>
+    <comment/>
+  </data>
+  <data name="car-selected" xml:space="preserve">
+    <value>Moshina tanlandi</value>
+    <comment/>
+  </data>
+  <data name="send-number" xml:space="preserve">
+    <value>Raqamni Jo'nating</value>
+    <comment/>
+  </data>
+  <data name="tesla-model-x-plaid-technical-feathures" xml:space="preserve">
+    <value>Tesla Model X Plaid texnik xususiyatlari </value>
+    <comment/>
+  </data>
+  <data name="tesla-model-y-technical-feathures" xml:space="preserve">
+    <value>Teska Model Y texnik xususiyatlari</value>
+    <comment/>
+  </data>
+  <data name="tesla-model-3-technical-feathures" xml:space="preserve">
+    <value>Teska Model 3 texnik xususiyatlari</value>
+    <comment/>
+  </data>
+  <data name="tesla-model-x-technical-feathures" xml:space="preserve">
+    <value>Tesla Model X texnik xususiyatlari </value>
+    <comment/>
+  </data>
+  <data name="bmw-m4" xml:space="preserve">
+    <value>BMW M4 texnik xususiyatlari</value>
+    <comment/>
+  </data>
+  <data name="bmw-m5" xml:space="preserve">
+    <value>BMW M5 texnik xususiyatlari</value>
+    <comment/>
+  </data>
+  <data name="bmw-i8" xml:space="preserve">
+    <value>BMW I8 texnik xususiyatlari</value>
+    <comment/>
+  </data>
+  <data name="bmw-x5" xml:space="preserve">
+    <value>BMW X5 texnik xususiyatlari</value>
+    <comment/>
+  </data>
+  <data name="chevrolet-tahoe" xml:space="preserve">
+    <value>Chevrolet Tahoe texnik xususiyatlari</value>
+    <comment/>
+  </data>
+  <data name="chevrolet-trailblzer" xml:space="preserve">
+    <value>Chevrolet Trailblazer texnik xususiyatlari</value>
+    <comment/>
+  </data>
+  <data name="chevrolet-malibu" xml:space="preserve">
+    <value>Chevrolet Malibu texnik xususiyatlari</value>
+    <comment/>
+  </data>
+  <data name="chevrolet-comaro" xml:space="preserve">
+    <value>Chevrolet Comaro texnik xususiyatlari</value>
+    <comment/>
+  </data>
+  <data name="hyundai-tucson" xml:space="preserve">
+    <value>Hyundai Tucson texnik xususiyatlari</value>
+    <comment/>
+  </data>
+  <data name="hyundai-sontafe" xml:space="preserve">
+    <value>Hyundai Sontafe texnik xususiyatlari</value>
+    <comment/>
+  </data>
+  <data name="hyundai-elantra" xml:space="preserve">
+    <value>Hyundai Elantra texnik xususiyatlari</value>
+    <comment/>
+  </data>
+  <data name="hyundai-sonata" xml:space="preserve">
+    <value>Hyundai Sonata texnik xususiyatlari</value>
+    <comment/>
+  </data>
+  <data name="kia-sorento" xml:space="preserve">
+    <value>KIA Sorento texnik xususiyatlari</value>
+    <comment/>
+  </data>
+  <data name="kia-stringer" xml:space="preserve">
+    <value>KIA Stringer texnik xususiyatlari</value>
+    <comment/>
+  </data>
+  <data name="kia-k5" xml:space="preserve">
+    <value>KIA K5 texnik xususiyatlari</value>
+    <comment/>
+  </data>
+  <data name="kia-soul" xml:space="preserve">
+    <value>KIA Soul texnik xususiyatlari</value>
+    <comment/>
+  </data>
+  <data name="prices-blank" xml:space="preserve">
+    <value>Narxlar Qog'ozi</value>
+    <comment/>
+  </data>
+  <data name="connect-with-operator" xml:space="preserve">
+    <value>Tez orada bizning operatorlar siz bilan bog'lanadi</value>
+    <comment/>
+  </data>
+  <data name="gotomenu" xml:space="preserve">
+    <value>Agar siz ushbu sahifadan chiqmoqchi bo'lsangiz. Agar xohlasangiz 🏠 tugmasini bosing</value>
     <comment/>
   </data>
 </root>
