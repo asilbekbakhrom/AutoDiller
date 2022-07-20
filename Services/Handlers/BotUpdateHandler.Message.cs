@@ -74,7 +74,7 @@ public partial class BotUpdateHandler
             "KIA Inc" => KIAModelsForInfo(client, message,token),
             "Chevrolet Inc" => ChevroletModelsInfo(client, message,token),
             "BMW Inc" => BMWModelsForInfo(client, message,token),
-             "KIA Soul" or "KIA K5" or "KIA Niro" or "KIA Sorento"or"Hyundai Sonata"or "Hyundai Elantra" or
+            "KIA Soul" or "KIA K5" or "KIA Niro" or "KIA Sorento"or"Hyundai Sonata"or "Hyundai Elantra" or
             "Hyundai Sontafe"or"Hyundai Tucson"or"Chevrolet Comaro"or"Chevrolet Malibu"or"Chevrolet Trailblazer"
             or"Chevrolet Tahoe"or"BMW X5"or"BMW M5"or"BMW I8"or"BMW M4"or"Tesla Model X"or"Tesla Model 3"or"Tesla Model Y"
             or"Tesla Cyber Truck" => WriteAvtomobilTanlandi(client,message,token),
