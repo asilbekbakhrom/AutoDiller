@@ -41,7 +41,6 @@ public class UserService
 
     public async Task<(bool IsSuccess, string? ErrorMessage)> UpdateLanguageCodeAsync(long? userId, string? languageCode)
     {
-        ArgumentNullException.ThrowIfNull(languageCode);
 
         var user = await GetUserAsync(userId);
 
@@ -53,7 +52,6 @@ public class UserService
         user.LanguageCode = languageCode;
         _context?.Users?.Update(user);
         await _context.SaveChangesAsync();
-
         return (true, null);
     }
 

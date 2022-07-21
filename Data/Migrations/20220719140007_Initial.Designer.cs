@@ -11,7 +11,7 @@ using bot.Data;
 namespace bot.Data.Migrations
 {
     [DbContext(typeof(BotDbContext))]
-    [Migration("20220706140727_Initial")]
+    [Migration("20220719140007_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,6 +24,9 @@ namespace bot.Data.Migrations
                     b.Property<long>("UserId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("AutoBrand")
+                        .HasColumnType("TEXT");
 
                     b.Property<long>("ChatId")
                         .HasColumnType("INTEGER");

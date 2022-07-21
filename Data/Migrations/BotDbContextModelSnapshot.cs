@@ -23,6 +23,9 @@ namespace bot.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("AutoBrand")
+                        .HasColumnType("TEXT");
+
                     b.Property<long>("ChatId")
                         .HasColumnType("INTEGER");
 
