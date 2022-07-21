@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="greeting" xml:space="preserve">
-    <value>👋 Привет &lt;strong&gt;{0}&lt;/strong&gt;, &amp;#10;&amp;#10;Это супер 🤖 с супер способностями 🦹🏻‍♂️! &amp;#10;&amp;#10;Чтобы начать, &lt;strong&gt;выберите язык&lt;/strong&gt; ниже 👇</value>
+    <value>👋 Привет {0}. Это Auto Diller 🤖. Выберите язык, чтобы начать👇</value>
     <comment/>
   </data>
   <data name="choose_brand" xml:space="preserve">
@@ -213,7 +213,7 @@
     <value>Kia K5 технические характеристики</value>
     <comment/>
   </data>
-  <data name="prices-blanc" xml:space="preserve">
+  <data name="prices-blank" xml:space="preserve">
     <value> Таблица цен</value>
     <comment/>
   </data>
@@ -222,11 +222,15 @@
     <comment/>
   </data>
   <data name="gotomenu" xml:space="preserve">
-    <value>Если вы хотите закрыть эту страницу. Если вы хотите, нажмите 🏠</value>
+    <value>Если вы хотите закрыть эту страницу нажмите 🏠</value>
     <comment/>
   </data>
   <data name="about-us" xml:space="preserve">
     <value>Это бот, созданный Асилбеком Бахромом. Связь с Асильбеком Бахромом @asilbek_bakhrom.</value>
+    <comment/>
+  </data>
+  <data name="phone-number" xml:space="preserve">
+    <value> "Поделитесь номером телефона📱"</value>
     <comment/>
   </data>
 </root>

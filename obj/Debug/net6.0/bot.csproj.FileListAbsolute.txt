@@ -201,3 +201,9 @@
 /home/asilbek/Downloads/auto_diler/AutoDiller/obj/Debug/net6.0/bot.Resources.BotLocalizer.uz.resources
 /home/asilbek/Downloads/auto_diler/AutoDiller/obj/Debug/net6.0/uz/bot.resources.cs
 /home/asilbek/Downloads/auto_diler/AutoDiller/obj/Debug/net6.0/uz/bot.resources.dll
+/home/asilbek/Downloads/auto_diler/AutoDiller/bin/Debug/net6.0/Microsoft.IdentityModel.Abstractions.dll
+/home/asilbek/Downloads/auto_diler/AutoDiller/bin/Debug/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/asilbek/Downloads/auto_diler/AutoDiller/bin/Debug/net6.0/Microsoft.IdentityModel.Logging.dll
+/home/asilbek/Downloads/auto_diler/AutoDiller/bin/Debug/net6.0/Microsoft.IdentityModel.Tokens.dll
+/home/asilbek/Downloads/auto_diler/AutoDiller/bin/Debug/net6.0/System.IdentityModel.Tokens.Jwt.dll
+/home/asilbek/Downloads/auto_diler/AutoDiller/bin/Debug/net6.0/Twilio.dll

@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="greeting" xml:space="preserve">
-    <value>👋 Salom &lt;strong&gt;{0}&lt;/strong&gt;,  &amp;#10;&amp;#10;Bu super qobilyatlarga 🦹🏻‍♂️ ega super 🤖.  &amp;#10;&amp;#10;Boshlash uchun &lt;strong&gt;Tilni tanlang&lt;/strong&gt;👇</value>
+    <value>👋 Salom {0} . Bu Auto Diller 🤖.Boshlash uchun Tilni tanlang👇</value>
     <comment/>
   </data>
   <data name="choose_brand" xml:space="preserve">
@@ -226,11 +226,15 @@
     <comment/>
   </data>
   <data name="gotomenu" xml:space="preserve">
-    <value>Agar siz ushbu sahifadan chiqmoqchi bo'lsangiz. Agar xohlasangiz 🏠 tugmasini bosing</value>
+    <value>Agar siz ushbu sahifadan chiqmoqchi bo'lsangi 🏠 tugmasini bosing</value>
     <comment/>
   </data>
   <data name="about-us" xml:space="preserve">
     <value>Bu Asilbek Baxrom tomonidan yaratilgan bot. Asilbek Bakhrom bilan bog'lanish uchun @asilbek_bakhrom.</value>
+    <comment/>
+  </data>
+  <data name="phone-number" xml:space="preserve">
+    <value>"Telefon raqamni ulashish📱"</value>
     <comment/>
   </data>
 </root>

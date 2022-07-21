@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="greeting" xml:space="preserve">
-    <value>👋 Hello &lt;strong&gt;{0}&lt;/strong&gt;, &amp;#10;&amp;#10;This is a super 🤖 with super abilities 🦹🏻‍♂️! &amp;#10;&amp;#10;To get started, please &lt;strong&gt;Select Language&lt;/strong&gt; below 👇</value>
+    <value> 👋 Hello {0} . This is Auto Diller 🤖. Select Language to start👇</value>
     <comment/>
   </data>
   <data name="choose_brand" xml:space="preserve">
@@ -231,6 +231,10 @@
   </data>
   <data name="about-us" xml:space="preserve">
     <value>This is a bot created by Asilbek Bahrom. To contact Asilbek Bakhrom @asilbek_bakhrom.</value>
+    <comment/>
+  </data>
+  <data name="phone-number" xml:space="preserve">
+    <value> "Share Phone Number📱"</value>
     <comment/>
   </data>
 </root>

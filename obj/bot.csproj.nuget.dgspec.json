@@ -59,6 +59,10 @@
             "telegram.bot": {
               "target": "Package",
               "version": "[18.0.0, )"
+            },
+            "twilio": {
+              "target": "Package",
+              "version": "[5.77.0, )"
             }
           },
           "imports": [
