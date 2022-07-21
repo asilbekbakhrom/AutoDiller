@@ -21,6 +21,7 @@ namespace bot.Data.Migrations
                     LastName = table.Column<string>(type: "TEXT", nullable: true),
                     Username = table.Column<string>(type: "TEXT", nullable: true),
                     LanguageCode = table.Column<string>(type: "TEXT", nullable: true),
+                    AutoBrand = table.Column<string>(type: "TEXT", nullable: true),
                     CreatedAt = table.Column<DateTimeOffset>(type: "TEXT", nullable: false),
                     LastInteractionAt = table.Column<DateTimeOffset>(type: "TEXT", nullable: false)
                 },

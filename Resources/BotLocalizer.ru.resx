@@ -118,11 +118,119 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="greeting" xml:space="preserve">
-    <value>Привет &lt;strong&gt;{0}&lt;/strong&gt;, &amp;#10;&amp;#10;Это супер 🤖 с супер способностями 🦹🏻‍♂️! &amp;#10;&amp;#10;Чтобы начать, &lt;strong&gt;выберите язык&lt;/strong&gt; ниже 👇</value>
+    <value>👋 Привет {0}. Это Auto Diller 🤖. Выберите язык, чтобы начать👇</value>
     <comment/>
   </data>
   <data name="choose_brand" xml:space="preserve">
     <value>Выберите марку автомобиля.</value>
+    <comment/>
+  </data>
+  <data name="what-do-you-want" xml:space="preserve">
+    <value> Что вы хотите сделать?</value>
+    <comment/>
+  </data>
+  <data name="car-selected" xml:space="preserve">
+    <value> Автомобиль выбран</value>
+    <comment/>
+  </data>
+  <data name="send-number" xml:space="preserve">
+    <value>Введите номер</value>
+    <comment/>
+  </data>
+  <data name="tesla-model-x-plaid-technical-feathures" xml:space="preserve">
+    <value> Технические характеристики Teska Model X Plaid</value>
+    <comment/>
+  </data>
+  <data name="tesla-model-y-technical-feathures" xml:space="preserve">
+    <value>Tesla Model X Plaid технические характеристики</value>
+    <comment/>
+  </data>
+  <data name="tesla-model-3-technical-feathures" xml:space="preserve">
+    <value>Tesla Model 3 технические характеристики</value>
+    <comment/>
+  </data>
+  <data name="tesla-model-x-technical-feathures" xml:space="preserve">
+    <value> Teska Model X технические характеристики</value>
+    <comment/>
+  </data>
+  <data name="bmw-m4" xml:space="preserve">
+    <value>BMW M4 технические характеристики</value>
+    <comment/>
+  </data>
+  <data name="bmw-m5" xml:space="preserve">
+    <value>BMW M5 технические характеристики</value>
+    <comment/>
+  </data>
+  <data name="bmw-i8" xml:space="preserve">
+    <value>BMW I8 технические характеристики</value>
+    <comment/>
+  </data>
+  <data name="bmw-x5" xml:space="preserve">
+    <value>BMW X5 технические характеристики</value>
+    <comment/>
+  </data>
+  <data name="chevrolet-tahoe" xml:space="preserve">
+    <value>Chevrolet Tahoe технические характеристики</value>
+    <comment/>
+  </data>
+  <data name="chevrolet-trailblazer" xml:space="preserve">
+    <value>Chevrolet Trailblazer технические характеристики</value>
+    <comment/>
+  </data>
+  <data name="chevrolet-malibu" xml:space="preserve">
+    <value>Chevrolet Malibu технические характеристики</value>
+    <comment/>
+  </data>
+  <data name="chevrolet-comaro" xml:space="preserve">
+    <value>Chevrolet Comaro технические характеристики</value>
+    <comment/>
+  </data>
+  <data name="hyundai-tucson" xml:space="preserve">
+    <value>Hyundai Tucson технические характеристики</value>
+    <comment/>
+  </data>
+  <data name="hyundai-sontafe" xml:space="preserve">
+    <value>Hyundai Sontafe технические характеристики</value>
+    <comment/>
+  </data>
+  <data name="hyundai-elantra" xml:space="preserve">
+    <value>Hyundai Elantra технические характеристики</value>
+    <comment/>
+  </data>
+  <data name="hyundai-sonata" xml:space="preserve">
+    <value>Hyundai Sonata технические характеристики</value>
+    <comment/>
+  </data>
+  <data name="kia-sorento" xml:space="preserve">
+    <value>Kia Sorento технические характеристики</value>
+    <comment/>
+  </data>
+  <data name="kia-stringer" xml:space="preserve">
+    <value>Kia Stirnger технические характеристики</value>
+    <comment/>
+  </data>
+  <data name="kia-k5" xml:space="preserve">
+    <value>Kia K5 технические характеристики</value>
+    <comment/>
+  </data>
+  <data name="prices-blank" xml:space="preserve">
+    <value> Таблица цен</value>
+    <comment/>
+  </data>
+  <data name="connect-with-operator" xml:space="preserve">
+    <value> Наши операторы свяжутся с вами в ближайшее время</value>
+    <comment/>
+  </data>
+  <data name="gotomenu" xml:space="preserve">
+    <value>Если вы хотите закрыть эту страницу нажмите 🏠</value>
+    <comment/>
+  </data>
+  <data name="about-us" xml:space="preserve">
+    <value>Это бот, созданный Асилбеком Бахромом. Связь с Асильбеком Бахромом @asilbek_bakhrom.</value>
+    <comment/>
+  </data>
+  <data name="phone-number" xml:space="preserve">
+    <value> "Поделитесь номером телефона📱"</value>
     <comment/>
   </data>
 </root>
