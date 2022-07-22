@@ -226,11 +226,35 @@
     <comment/>
   </data>
   <data name="about-us" xml:space="preserve">
-    <value>Это бот, созданный Асилбеком Бахромом. Связь с Асильбеком Бахромом @asilbek_bakhrom.</value>
+    <value>О нас</value>
     <comment/>
   </data>
   <data name="phone-number" xml:space="preserve">
-    <value> "Поделитесь номером телефона📱"</value>
+    <value> Поделитесь номером телефона📱</value>
+    <comment/>
+  </data>
+  <data name="language-selected" xml:space="preserve">
+    <value>Русский язык Выбран🇷🇺</value>
+    <comment/>
+  </data>
+  <data name="test-drive" xml:space="preserve">
+    <value>Тест Драйв </value>
+    <comment/>
+  </data>
+  <data name="propose" xml:space="preserve">
+    <value>Подписать котракт</value>
+    <comment/>
+  </data>
+  <data name="car-informations" xml:space="preserve">
+    <value>Информация о машине</value>
+    <comment/>
+  </data>
+  <data name="prices" xml:space="preserve">
+    <value>Цены автомобилей</value>
+    <comment/>
+  </data>
+  <data name="change-language" xml:space="preserve">
+    <value>Изменить язык</value>
     <comment/>
   </data>
 </root>

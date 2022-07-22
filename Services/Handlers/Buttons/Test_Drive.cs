@@ -11,7 +11,7 @@ public partial class TestDrive
         await botClient.SendTextMessageAsync(
             chatId: message.Chat.Id,
             text: choose_brand,
-            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.CarNames.Values.ToArray(), 3),
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.CarNames.Values.ToArray(), 2),
             parseMode: ParseMode.Html,
             cancellationToken: token);         
     }

@@ -60,18 +60,16 @@ public partial class BotUpdateHandler
     {
         var from = message.From;
         _logger.LogInformation("From: {from.Firstname} ChatId: {message.Chat.Id}", from?.FirstName, message.Chat.Id);
-
         var handler = message.Text switch
         {
             "/start" => HandleStartAsync.Start(client, message, token,_localizer["greeting", message.Chat.FirstName]),
             "O'zbekcha🇺🇿" or "Русский🇷🇺" or "English🏴󠁧󠁢󠁥󠁮󠁧󠁿" => HandleLanguageAsync(client,message,token),
-            // "Tesla" or "Hyundai" or "KIA" or "Chevrolet" or "BMW"  => Functions(client, message, token),
-            "ℹ️" => AboutUs.AboutBot(client,message,token,_localizer["gotomenu"],_localizer["about-us"]),
-            "Test Drive" => TestDrive.Test(client,message,token,_localizer["choose_brand"]),
-            "📄✍️" => CarBuy.Car_Buy(client,message,token,_localizer["choose_brand"]),
-            "🚘ℹ️" => CarInfo.Car_Info(client,message,token,_localizer["choose_brand"]),
-            "💲" => Prices_Blank.Prices(client,message,token,_localizer["prices-blank"],_localizer["gotomenu"]),
-            "🇺🇿🔄🇷🇺🔄🏴󠁧󠁢󠁥󠁮󠁧󠁿" => HandleStartAsync.Start(client, message, token,_localizer["greeting", message.Chat.FirstName]),
+            "Biz haqimizda" or "О нас" or "About Us" => AboutUs.AboutBot(client,message,token,_localizer["gotomenu"],_localizer["about-us"]),
+            "Test Drive" or "Тест Драйв" => TestDrive.Test(client,message,token,_localizer["choose_brand"]),
+            "Shartnoma imzolash" or "Подписать котракт" or "Signing the contract" => CarBuy.Car_Buy(client,message,token,_localizer["choose_brand"]),
+            "Avtomobil haqidagi ma`lumot" or "Информация о машине" or "Information about car" => CarInfo.Car_Info(client,message,token,_localizer["choose_brand"]),
+            "Avtomobil Narxlari" or "Цены автомобилей" or "Car Prices" => Prices_Blank.Prices(client,message,token,_localizer["prices-blank"],_localizer["gotomenu"]),
+            "Change Language" or "Tilni o'zgartirish" or "Изменить язык" => HandleStartAsync.Start(client, message, token,_localizer["greeting", message.Chat.FirstName]),
             "Tesla" => TeslaModels.Tesla_Models(client, message,token),
             "Hyundai" => HyundaiModels.Hyundai_Models(client, message,token),
             "KIA" => KIAModels.KIA_Models(client,message,token),
@@ -82,7 +80,7 @@ public partial class BotUpdateHandler
             "KIA Inc" => KIAModelsForInfo.KIA_Models_ForInfo(client, message,token),
             "Chevrolet Inc" => ChevroletModelsInfo.Chevrolet_Models_ForInfo(client, message,token),
             "BMW Inc" => BMWModelsForInfo.BMW_Models_ForInfo(client, message,token),
-            "🏠" => BackHome.Back(client,message,token,_localizer["what-do-you-want"]),
+            "🏠" => Back(client,message,token),
             "KIA Soul" or "KIA K5" or "KIA Niro" or "KIA Sorento"or"Hyundai Sonata"or "Hyundai Elantra" or
             "Hyundai Sontafe"or"Hyundai Tucson"or"Chevrolet Comaro"or"Chevrolet Malibu"or"Chevrolet Trailblazer"
             or"Chevrolet Tahoe"or"BMW X5"or"BMW M5"or"BMW I8"or"BMW M4"or"Tesla Model X"or"Tesla Model 3"or"Tesla Model Y"
@@ -125,7 +123,15 @@ public partial class BotUpdateHandler
                 cancellationToken: token);  
         await GetNumber.Number(client, message, token,_localizer["send-number"],_localizer["phone-number"]);                     
     }
-
+    public Dictionary<string, string> FunctionsNames => new()
+    {
+        { "td", _localizer["test-drive"] },
+        { "soa", _localizer["propose"] },
+        { "at", _localizer["car-informations"] },
+        { "nj", _localizer["prices"] },
+        { "chl", _localizer["change-language"] },
+        {"us",_localizer["about-us"]}
+    };
     private async Task HandleLanguageAsync(ITelegramBotClient client, Message message, CancellationToken token)
     {
         var cultureString = StringConstants.LanguageNames.FirstOrDefault(v => v.Value == message.Text).Key;
@@ -136,7 +142,21 @@ public partial class BotUpdateHandler
         await client.SendTextMessageAsync(
             chatId: message.Chat.Id,
             text: _localizer["language-selected"],
-            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.FunctionsNames.Values.ToArray(), 4),
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(FunctionsNames.Values.ToArray(), 2),
             cancellationToken: token);
+    }
+    private async Task Function(ITelegramBotClient client, Message message, CancellationToken token)
+    {
+        var from = message.From;
+        await client.SendTextMessageAsync(
+            chatId: message.Chat.Id,
+            text: _localizer["what-do-you-want"],
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(FunctionsNames.Values.ToArray(), 4),
+            parseMode: ParseMode.Html,
+            cancellationToken: token);   
+    } 
+    private async Task Back(ITelegramBotClient client, Message message, CancellationToken token)
+    {
+        await Function(client, message, token);
     }
 }    

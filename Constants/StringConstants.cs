@@ -2,10 +2,10 @@ namespace bot.Constants;
 
 public static class StringConstants
 {
-    public static Dictionary<string, string> Menu => new()
-    {
-        { "trj", "Telefon Raqamni jo'natish"}
-    };
+    // public static Dictionary<string, string> Menu => new()
+    // {
+    //     { "trj", "Telefon Raqamni jo'natish"}
+    // };
      
     public static Dictionary<string, string> GotoMenu => new()
     {
@@ -32,15 +32,6 @@ public static class StringConstants
         { "ka", "KIA Inc" },
         { "ct", "Chevrolet Inc" },
         { "bw", "BMW Inc"},
-    };
-    public static Dictionary<string, string> FunctionsNames => new()
-    {
-        { "td", "Test Drive" },
-        { "soa", "📄✍️" },
-        { "at", "🚘ℹ️" },
-        { "nj", "💲" },
-        { "chl", "🇺🇿🔄🇷🇺🔄🏴󠁧󠁢󠁥󠁮󠁧󠁿" },
-        {"us","ℹ️"}
     };
     public static Dictionary<string, string> KIATypes => new()
     {

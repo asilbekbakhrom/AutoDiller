@@ -17,7 +17,7 @@ public partial class AboutUs
           await botClient.SendTextMessageAsync(
             chatId: message.Chat.Id,
             text: gotomenu,
-            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.GotoMenu.Values.ToArray(), 5),
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.GotoMenu.Values.ToArray(), 2),
             parseMode: ParseMode.Html,
             cancellationToken: token);         
     }

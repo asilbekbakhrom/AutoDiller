@@ -23,7 +23,7 @@ public partial class Prices_Blank
         await client.SendTextMessageAsync(
             chatId: message.Chat.Id,
             text: gotomenu,
-            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.GotoMenu.Values.ToArray(), 5),
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.GotoMenu.Values.ToArray(), 2),
             parseMode: ParseMode.Html,
             cancellationToken: token);  
     }

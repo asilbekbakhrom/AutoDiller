@@ -13,7 +13,7 @@ public partial class CarInfo
         await client.SendTextMessageAsync(
             chatId: message.Chat.Id,
             text: choose_brand,
-            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.CarNamesForInfo.Values.ToArray(), 5),
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.CarNamesForInfo.Values.ToArray(), 2),
             parseMode: ParseMode.Html,
             cancellationToken: token);
 }   

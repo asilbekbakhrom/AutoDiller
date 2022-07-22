@@ -230,11 +230,35 @@
     <comment/>
   </data>
   <data name="about-us" xml:space="preserve">
-    <value>This is a bot created by Asilbek Bahrom. To contact Asilbek Bakhrom @asilbek_bakhrom.</value>
+    <value>About Us</value>
     <comment/>
   </data>
   <data name="phone-number" xml:space="preserve">
-    <value> "Share Phone Number📱"</value>
+    <value>Share Phone Number📱</value>
+    <comment/>
+  </data>
+  <data name="language-selected" xml:space="preserve">
+    <value>English Language Selected🇬🇧</value>
+    <comment/>
+  </data>
+  <data name="test-drive" xml:space="preserve">
+    <value>Test Drive</value>
+    <comment/>
+  </data>
+  <data name="propose" xml:space="preserve">
+    <value>Signing the contract</value>
+    <comment/>
+  </data>
+  <data name="car-informations" xml:space="preserve">
+    <value>Information about car</value>
+    <comment/>
+  </data>
+  <data name="prices" xml:space="preserve">
+    <value>Car Prices</value>
+    <comment/>
+  </data>
+  <data name="change-language" xml:space="preserve">
+    <value>Change Language</value>
     <comment/>
   </data>
 </root>

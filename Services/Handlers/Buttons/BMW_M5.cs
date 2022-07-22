@@ -26,7 +26,6 @@ public partial class BMW_M5
             caption:bmw_m5,
             photo: stream,
             cancellationToken: token); 
-
         await client.SendTextMessageAsync(
             chatId: message.Chat.Id,
             text: gotomenu,

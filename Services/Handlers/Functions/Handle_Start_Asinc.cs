@@ -13,7 +13,7 @@ public partial class HandleStartAsync
         await client.SendTextMessageAsync(
                 chatId: message.Chat.Id,
                 text: greeting,
-                replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.LanguageNames.Values.ToArray(), 3),
+                replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.LanguageNames.Values.ToArray(), 2),
                 cancellationToken: token);       
     }     
 }
