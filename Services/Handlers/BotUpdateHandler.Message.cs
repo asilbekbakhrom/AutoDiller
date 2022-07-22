@@ -4,6 +4,8 @@ using Telegram.Bot;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types.ReplyMarkups;
+using System.Globalization;
+
 namespace bot.Services;
 
 public partial class BotUpdateHandler
@@ -126,13 +128,15 @@ public partial class BotUpdateHandler
 
     private async Task HandleLanguageAsync(ITelegramBotClient client, Message message, CancellationToken token)
     {
-        
-        await client.SendTextMessageAsync(chatId: message.Chat.Id,
-        text: "✔️",
-        replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.FunctionsNames.Values.ToArray(), 4),
-        cancellationToken: token);
         var cultureString = StringConstants.LanguageNames.FirstOrDefault(v => v.Value == message.Text).Key;
         await _userService.UpdateLanguageCodeAsync(message?.From?.Id, cultureString);
-
+        CultureInfo.CurrentCulture=new CultureInfo(cultureString);
+        CultureInfo.CurrentUICulture=new CultureInfo(cultureString);
+        
+        await client.SendTextMessageAsync(
+            chatId: message.Chat.Id,
+            text: _localizer["language-selected"],
+            replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.FunctionsNames.Values.ToArray(), 4),
+            cancellationToken: token);
     }
 }    
