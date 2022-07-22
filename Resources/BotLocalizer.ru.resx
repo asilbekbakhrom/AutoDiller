@@ -233,4 +233,8 @@
     <value> "Поделитесь номером телефона📱"</value>
     <comment/>
   </data>
+  <data name="language-selected" xml:space="preserve">
+    <value>"Русский язык Выбран🇷🇺"</value>
+    <comment/>
+  </data>
 </root>

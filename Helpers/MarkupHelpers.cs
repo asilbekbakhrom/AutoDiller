@@ -21,13 +21,21 @@ public static class MarkupHelpers
 
         return new InlineKeyboardMarkup(buttonMatrix.ToArray());
     }
-
     public static ReplyKeyboardMarkup GetReplyKeyboardMarkup(string[] keys, int columns = 2)
     {
-        var buttons = keys.Select(k => new KeyboardButton(k));
-        return new ReplyKeyboardMarkup(buttons)
+        int row = 0;
+
+        var buttonMatrix = new List<List<KeyboardButton>>();
+
+        while(keys.Skip(row).Take(columns)?.Count() > 0)
         {
-            ResizeKeyboard = true
-        };
+            var buttons = keys.Skip(row * columns).Take(columns).Select(k => new KeyboardButton(k)).ToList();
+
+            buttonMatrix.Add(buttons);
+            
+            row++;
+        }
+
+        return new ReplyKeyboardMarkup(buttonMatrix.ToArray()){ResizeKeyboard = true};
     }
 }

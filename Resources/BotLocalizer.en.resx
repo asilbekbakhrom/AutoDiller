@@ -237,4 +237,8 @@
     <value> "Share Phone Number📱"</value>
     <comment/>
   </data>
+  <data name="language-selected" xml:space="preserve">
+    <value>"English Language Selected🏴󠁧󠁢󠁥󠁮󠁧󠁿"</value>
+    <comment/>
+  </data>
 </root>

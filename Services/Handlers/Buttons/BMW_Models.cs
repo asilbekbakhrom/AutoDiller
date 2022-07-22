@@ -10,7 +10,7 @@ public partial class BMW_Models
     {
         await client.SendTextMessageAsync(
                 chatId: message.Chat.Id,
-                text: "Chevrolet",
+                text: "BMW",
                 replyMarkup: MarkupHelpers.GetReplyKeyboardMarkup(StringConstants.BMWTypes.Values.ToArray(), 2),
                 parseMode: ParseMode.Html,
                 cancellationToken: token);         

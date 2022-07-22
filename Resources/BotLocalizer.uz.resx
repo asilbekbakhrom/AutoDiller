@@ -237,4 +237,8 @@
     <value>"Telefon raqamni ulashish📱"</value>
     <comment/>
   </data>
+  <data name="language-selected" xml:space="preserve">
+    <value>"O'zbek TiliTanlandi🇺🇿"</value>
+    <comment/>
+  </data>
 </root>

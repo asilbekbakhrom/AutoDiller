@@ -3,7 +3,6 @@ using bot.Constants;
 using bot.Helpers;
 using Telegram.Bot;
 using Telegram.Bot.Types;
-using Telegram.Bot.Types.Enums;
 
 public partial class HandleStartAsync
 {
